@@ -22,7 +22,7 @@ class JsonUtils(object):
                     json = json[p]
                 else:
                     return default
-        return json.unicode
+        return unicode(json)
 
 class VkError(Exception):    
     pass
