@@ -1,37 +1,37 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import networkx as nx
-import os
+#import os
 from collections import Counter
 import datetime as dt
 import community
 
 from FlaskWebProject import vk_api
 
-from matplotlib import rc, rcParams
-font = {'family': 'Droid Sans',
-        'weight': 'normal'}
-rc('font', **font)
-
-
-colors = [(0.10588235294117647, 0.6196078431372549, 0.4666666666666667),
-(0.8509803921568627, 0.37254901960784315, 0.00784313725490196),
-(0.4588235294117647, 0.4392156862745098, 0.7019607843137254),
-(0.9058823529411765, 0.1607843137254902, 0.5411764705882353),
-(0.4, 0.6509803921568628, 0.11764705882352941),
-(0.9019607843137255, 0.6705882352941176, 0.00784313725490196),
-(0.6509803921568628, 0.4627450980392157, 0.11372549019607843)]
-
-rcParams['figure.figsize'] = (10, 6)
-rcParams['figure.dpi'] = 150
-rcParams['axes.color_cycle'] = colors
-rcParams['lines.linewidth'] = 2
-rcParams['axes.facecolor'] = 'white'
-rcParams['font.size'] = 14
-rcParams['patch.edgecolor'] = 'white'
-rcParams['patch.facecolor'] = colors[0]
-rcParams['font.family'] = 'StixGeneral'
+# from matplotlib import rc, rcParams
+# font = {'family': 'Droid Sans',
+#         'weight': 'normal'}
+# rc('font', **font)
+#
+#
+# colors = [(0.10588235294117647, 0.6196078431372549, 0.4666666666666667),
+# (0.8509803921568627, 0.37254901960784315, 0.00784313725490196),
+# (0.4588235294117647, 0.4392156862745098, 0.7019607843137254),
+# (0.9058823529411765, 0.1607843137254902, 0.5411764705882353),
+# (0.4, 0.6509803921568628, 0.11764705882352941),
+# (0.9019607843137255, 0.6705882352941176, 0.00784313725490196),
+# (0.6509803921568628, 0.4627450980392157, 0.11372549019607843)]
+#
+# rcParams['figure.figsize'] = (10, 6)
+# rcParams['figure.dpi'] = 150
+# rcParams['axes.color_cycle'] = colors
+# rcParams['lines.linewidth'] = 2
+# rcParams['axes.facecolor'] = 'white'
+# rcParams['font.size'] = 14
+# rcParams['patch.edgecolor'] = 'white'
+# rcParams['patch.facecolor'] = colors[0]
+# rcParams['font.family'] = 'StixGeneral'
 
 fields = ['first_name', 'last_name', 'bdate','sex',
          'city.title',
@@ -209,10 +209,11 @@ def find_user_age(user_id):
     for user, friends in inf[1].iteritems():
     	for friend in friends:
     		graph.add_edge(user, friend)
+
     graph.remove_node(user_id)
     #
     # plt.figure(figsize=(7, 7))
-    # 
+    #
     # return [1,2,3,4,user_id]
     #
     # nx.draw_spring(graph, node_size=8, alpha=0.4)
