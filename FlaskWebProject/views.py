@@ -8,9 +8,17 @@ from FlaskWebProject import app
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
-	###results = {}
-	###errors = []
-	###if request.method == 'POST':
+	results = {}
+	errors = []
+	if request.method == 'POST':
+		user_id = request.form['id']
+		if user_id:
+			results = [('Mi', user_id)]
+			return render_template('index.html', errors = errors, user_id = user_id, results = results)
+		else:
+			errors.append("The form should not be empty")
+			return render_template('index.html', errors = errors)
+		
 		###try:
 			###user_id = request.form['id']
 			###mynum = np.random.randint(100)
