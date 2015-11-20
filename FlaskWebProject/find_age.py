@@ -5,7 +5,7 @@ import networkx as nx
 #import os
 from collections import Counter
 import datetime as dt
-import community
+import comm as community
 
 from FlaskWebProject import vk_api
 
