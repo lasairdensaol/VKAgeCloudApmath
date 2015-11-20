@@ -26,7 +26,7 @@ def index():
 				errors.append("The form should not be empty")
 				return render_template('index.html', errors = errors)
 		except:
-			errors.append("Wrong id or no access the Internet. Please make sure it is right and try again")
+			errors.append("You shall not pass!")
 			return render_template('index.html', errors = errors)
 
 	return render_template('index.html')
