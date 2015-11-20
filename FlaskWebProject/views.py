@@ -5,6 +5,7 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import render_template, request
 from FlaskWebProject import app
+import numpy as np
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -13,7 +14,7 @@ def index():
 	if request.method == 'POST':
 		user_id = request.form['id']
 		if user_id:
-			results = [('Mi', user_id)]
+			results = [('Mi', np.random.randint(100))]
 			return render_template('index.html', errors = errors, user_id = user_id, results = results)
 		else:
 			errors.append("The form should not be empty")
