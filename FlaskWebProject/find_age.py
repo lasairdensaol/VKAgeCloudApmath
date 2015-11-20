@@ -210,23 +210,21 @@ def find_user_age(user_id):
     	for friend in friends:
     		graph.add_edge(user, friend)
     graph.remove_node(user_id)
+    #
+    # plt.figure(figsize=(7, 7))
+    # 
+    # return [1,2,3,4,user_id]
+    #
+    # nx.draw_spring(graph, node_size=8, alpha=0.4)
+    #
+    # return [1,2,3,4,user_id]
 
-    plt.figure(figsize=(7, 7))
-
-    return [1,2,3,4,user_id]
-
-    nx.draw_spring(graph, node_size=8, alpha=0.4)
-
-    return [1,2,3,4,user_id]
-
-    exist_img = os.listdir(r'FlaskWebProject\static\images\\')
-
-    if str(user_id) + '.png' not in exist_img:
-    	plt.savefig(r'FlaskWebProject\static\images\\' + str(user_id) + '.png')
-
-    plt.close()
-
-
+    # exist_img = os.listdir(r'FlaskWebProject\static\images\\')
+    #
+    # if str(user_id) + '.png' not in exist_img:
+    # 	plt.savefig(r'FlaskWebProject\static\images\\' + str(user_id) + '.png')
+    #
+    # plt.close()
 
     communities = community.best_partition(graph)
 
