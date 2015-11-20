@@ -205,14 +205,14 @@ def find_user_age(user_id):
     
     df['age'] = df.loc[:, 'bdate'].map(map_age)
 
-    return [1,2,3,4,user_id]
-
     graph = nx.Graph()
     for user, friends in inf[1].iteritems():
     	for friend in friends:
     		graph.add_edge(user, friend)
     graph.remove_node(user_id)
-	
+
+    return [1,2,3,4,user_id]
+
     plt.figure(figsize=(7, 7))
     nx.draw_spring(graph, node_size=8, alpha=0.4)
 
