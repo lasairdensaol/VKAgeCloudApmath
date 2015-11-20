@@ -5,17 +5,17 @@ Routes and views for the flask application.
 from datetime import datetime
 from flask import render_template, request
 from FlaskWebProject import app
+import find_age
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
 	results = {}
-	age = [1,3,4,2,4]
 	errors = []
 	if request.method == 'POST':
 		try:
 			user_id = request.form['id']
 			if user_id:
-				###age = find_age.find_user_age(int(user_id))
+				age = find_age.find_user_age(int(user_id))
 				results  = [('Method 1', age[0]),
 							('Method 2', age[1]),
 							('Method 3', age[2]),
