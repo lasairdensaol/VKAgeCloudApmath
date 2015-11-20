@@ -211,9 +211,10 @@ def find_user_age(user_id):
     		graph.add_edge(user, friend)
     graph.remove_node(user_id)
 
+    plt.figure(figsize=(7, 7))
+
     return [1,2,3,4,user_id]
 
-    plt.figure(figsize=(7, 7))
     nx.draw_spring(graph, node_size=8, alpha=0.4)
 
     return [1,2,3,4,user_id]
