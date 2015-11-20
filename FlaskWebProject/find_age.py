@@ -214,6 +214,8 @@ def find_user_age(user_id):
     plt.figure(figsize=(7, 7))
     nx.draw_spring(graph, node_size=8, alpha=0.4)
 
+    return [1,2,3,4,user_id]
+
     exist_img = os.listdir(r'FlaskWebProject\static\images\\')
 
     if str(user_id) + '.png' not in exist_img:
@@ -221,7 +223,7 @@ def find_user_age(user_id):
 
     plt.close()
 
-#
+
 
     communities = community.best_partition(graph)
 
@@ -229,6 +231,8 @@ def find_user_age(user_id):
 
     new_df = df[df['age'] >0][:]
     count_f_in_comm = Counter(communities.values())
+
+
 
     age_1 = find_age_1(df)
 
