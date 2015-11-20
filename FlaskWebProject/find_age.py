@@ -7,7 +7,7 @@ from collections import Counter
 import datetime as dt
 import community
 
-###from FlaskWebProject import vk_api
+from FlaskWebProject import vk_api
 
 from matplotlib import rc, rcParams
 # font = {'family': 'Droid Sans',
@@ -166,30 +166,32 @@ from matplotlib import rc, rcParams
 #             comm_min_var = new_df[new_df['community'] == k[0]]['age']
 #             return int(np.sum(comm_min_var)/len(comm_min_var))
 #
-# def find_user_network(user_id):
-# 	api = vk_api.VkAPI()
-#
-# 	friends_ids = api.get_friends(user_id)
-# 	friends_ids_set = set(friends_ids)
-#
-# 	user_network = { user_id : friends_ids }
-#
-# 	for friend_id in friends_ids:
-# 		try:
-# 			friend_friends_ids = api.get_friends(friend_id)
-# 			user_network[friend_id] = [x for x in friend_friends_ids if x in friends_ids_set]
-# 		except:
-# 			pass
-#
-# 	friend_profiles = api.get_user_profiles(friends_ids)
-#
-# 	return [friend_profiles, user_network]
+def find_user_network(user_id):
+ 	api = vk_api.VkAPI()
+
+ 	friends_ids = api.get_friends(user_id)
+ 	friends_ids_set = set(friends_ids)
+
+ 	user_network = { user_id : friends_ids }
+
+ 	for friend_id in friends_ids:
+ 		try:
+ 			friend_friends_ids = api.get_friends(friend_id)
+ 			user_network[friend_id] = [x for x in friend_friends_ids if x in friends_ids_set]
+ 		except:
+ 			pass
+
+ 	friend_profiles = api.get_user_profiles(friends_ids)
+
+ 	return [friend_profiles, user_network]
 	
 def find_user_age(user_id):
 
-    return [1,2,3,4,5]
+    inf = find_user_network(user_id)
+
+    return [1,2,3,4,user_id]
 	
-"""	inf = find_user_network(user_id)
+"""
 
 		
 	index = [int(fp['id']) for fp in inf[0]]
