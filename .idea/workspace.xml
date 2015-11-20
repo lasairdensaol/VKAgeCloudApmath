@@ -41,8 +41,8 @@
       <file leaf-file-name="find_age.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FlaskWebProject/find_age.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16721311" vertical-offset="17" max-vertical-offset="4386">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6409836" vertical-offset="3536" max-vertical-offset="4352">
+              <caret line="231" column="2" selection-start-line="231" selection-start-column="2" selection-end-line="231" selection-end-column="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -373,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FlaskWebProject/find_age.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16721311" vertical-offset="17" max-vertical-offset="4386">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.6409836" vertical-offset="3536" max-vertical-offset="4352">
+          <caret line="231" column="2" selection-start-line="231" selection-start-column="2" selection-end-line="231" selection-end-column="28" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

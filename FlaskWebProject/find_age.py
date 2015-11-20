@@ -227,8 +227,6 @@ def find_user_age(user_id):
     #
     # plt.close()
 
-    return [1,2,3,4,user_id]
-
     communities = community.best_partition(graph)
 
     return [1,2,3,4,user_id]
