@@ -229,6 +229,8 @@ def find_user_age(user_id):
 
     communities = community.best_partition(graph)
 
+    return [1,2,3,4,user_id]
+
     df['community'] = df.index.map(lambda x : communities[x] if x in communities else None)
 
     new_df = df[df['age'] >0][:]
